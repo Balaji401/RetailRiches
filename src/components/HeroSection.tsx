@@ -5,11 +5,10 @@ import heroBg from "@/assets/hero-bg.jpg";
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="Trading mentor background" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center pt-24 pb-16">
@@ -19,12 +18,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
-            <span className="text-foreground">YOUR ULTIMATE</span>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold leading-tight mb-6 tracking-tight">
+            <span className="text-foreground">LEARN TO TRADE</span>
             <br />
-            <span className="text-foreground">GUIDE TO</span>
-            <br />
-            <span className="text-gradient-gold">TRADING PSYCHOLOGY</span>
+            <span className="text-foreground">THE </span>
+            <span className="text-gradient-gold">RIGHT WAY</span>
           </h1>
 
           <motion.p
@@ -33,7 +31,7 @@ const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            From psychology to execution — unlock the mindset of profitable traders.
+            No shortcuts. No hype. Just clear, honest mentorship to help you become a confident and profitable trader.
           </motion.p>
 
           <motion.button
@@ -41,14 +39,13 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-            className="inline-flex items-center gap-3 bg-cream text-background px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-all shadow-luxury"
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-all shadow-luxury"
           >
             <Play size={18} className="fill-current" />
-            WHO AM I?
+            START YOUR JOURNEY
           </motion.button>
         </motion.div>
 
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -1,57 +1,40 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, Brain, MessageCircle, Building, Crown, Check, ExternalLink, Flame } from "lucide-react";
+import { GraduationCap, Crown, Check, ExternalLink, Flame, MessageCircle, Clock } from "lucide-react";
 
 const offerings = [
   {
     icon: GraduationCap,
     title: "One-on-One Online Mentorship",
-    desc: "Comprehensive mentorship covering forex, crypto, and derivatives trading.",
-    features: ["Complete technical analysis training", "Risk management & trading psychology", "Lifetime community access & support"],
+    desc: "Complete trading training — from basics to advanced strategies. Perfect for beginners and intermediates who want real skills.",
+    features: ["Learn chart reading & price action from scratch", "Risk management made simple", "Lifetime access to our trading community"],
     price: "₹29,999",
     duration: "1-hour session, every alternate day for 2 months",
     note: "6 months continued mentorship",
     highlight: false,
-  },
-  {
-    icon: Brain,
-    title: "Life & Performance Consultation",
-    desc: "A private session to help you regain clarity, discipline, and direction in life.",
-    features: ["Personal life & performance guidance", "Mental clarity & discipline coaching", "Practical solutions for life challenges"],
-    price: "₹2,499",
-    duration: "45 minutes",
-    note: "Not related to trading",
-    highlight: false,
+    comingSoon: false,
   },
   {
     icon: MessageCircle,
-    title: "Psychology Consultation (Single)",
-    desc: "Expert guidance in a focused 1:1 session to kickstart your trading journey.",
-    features: ["In-depth trading plan review", "Personalized solutions for challenges", "Live Q&A with Venkata Balaji"],
+    title: "One-Time Consultation",
+    desc: "Not sure if trading is for you? Book a quick call. I'll help you decide — plus give some life direction and guidance.",
+    features: ["Honest assessment — is trading right for you?", "Clear roadmap for your trading journey", "Life guidance & clarity session"],
     price: "₹4,999",
-    duration: "60 minutes",
-    note: "Fee deducted if you join mentorship",
+    duration: "45 minutes",
+    note: "Fee adjusted if you join mentorship",
     highlight: false,
-  },
-  {
-    icon: Building,
-    title: "One-on-One Offline Mentorship",
-    desc: "Premium in-person mentorship experience at our trading institute.",
-    features: ["In-Person mentorship at institute", "Hands-on trading setup guidance", "Real-time market analysis together"],
-    price: "₹44,999",
-    duration: "3 sessions/week, 1hr each, for 2 months",
-    note: "Lifetime community access",
-    highlight: false,
+    comingSoon: false,
   },
   {
     icon: Crown,
     title: "Elite Mastery Program",
-    desc: "The Ultimate Trading Experience — elite-level, high-priority coaching with lifetime guidance.",
-    features: ["One-on-one online/in-person sessions", "Live trading & market execution", "Top-priority support"],
-    price: "₹1,24,999",
+    desc: "The ultimate trading experience — premium, high-priority coaching with lifetime guidance. For serious traders only.",
+    features: ["One-on-one online or in-person sessions", "Live trading together in real markets", "Top-priority support & lifetime access"],
+    price: "",
     duration: "Comprehensive Program",
-    note: "Next Available: April 2026",
+    note: "Coming Soon — Based on People's Interest",
     highlight: true,
+    comingSoon: true,
   },
 ];
 
@@ -69,10 +52,10 @@ const OfferingsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Trading <span className="text-gradient-gold">Mentorship Programs</span>
+            Choose Your <span className="text-gradient-gold">Learning Path</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Choose Your Path to Trading Excellence with Venkata Balaji Annam
+            Simple plans. Real results. Pick what works for you.
           </p>
         </motion.div>
 
@@ -85,13 +68,13 @@ const OfferingsSection = () => {
               transition={{ delay: i * 0.1 + 0.2, duration: 0.5 }}
               className={`relative bg-gradient-card border rounded-xl p-6 flex flex-col ${
                 o.highlight
-                  ? "border-primary/50 glow-gold lg:col-span-1"
+                  ? "border-primary/50 glow-gold"
                   : "border-border hover:border-primary/20"
               } transition-all duration-300`}
             >
               {o.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-gold text-primary-foreground px-4 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                  <Flame size={12} /> RECOMMENDED
+                  <Flame size={12} /> COMING SOON
                 </div>
               )}
 
@@ -112,20 +95,36 @@ const OfferingsSection = () => {
               </ul>
 
               <div className="border-t border-border pt-4">
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-2xl font-display font-bold text-primary">{o.price}</span>
-                </div>
-                <p className="text-xs text-muted-foreground mb-1">{o.duration} (Inclusive of GST)</p>
-                {o.note && <p className="text-xs text-primary/80 font-medium">{o.note}</p>}
+                {o.price && (
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="text-2xl font-display font-bold text-primary">{o.price}</span>
+                  </div>
+                )}
+                <p className="text-xs text-muted-foreground mb-1">{o.duration} {o.price && "(Inclusive of GST)"}</p>
+                {o.note && (
+                  <p className={`text-xs font-medium ${o.comingSoon ? "text-primary flex items-center gap-1" : "text-primary/80"}`}>
+                    {o.comingSoon && <Clock size={12} />}
+                    {o.note}
+                  </p>
+                )}
 
-                <a
-                  href="https://wa.me/917011168018"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 w-full inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
-                >
-                  Book Your Session <ExternalLink size={14} />
-                </a>
+                {o.comingSoon ? (
+                  <button
+                    disabled
+                    className="mt-4 w-full inline-flex items-center justify-center gap-2 bg-secondary text-muted-foreground px-6 py-3 rounded-lg text-sm font-semibold cursor-not-allowed opacity-60"
+                  >
+                    Coming Soon
+                  </button>
+                ) : (
+                  <a
+                    href="https://wa.me/916309323739?text=hi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 w-full inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+                  >
+                    Book Your Session <ExternalLink size={14} />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

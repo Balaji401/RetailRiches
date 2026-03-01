@@ -3,13 +3,13 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo-transparent.png";
 
-const navItems = ["Home", "About", "Offerings", "Why Us", "FAQ", "Contact"];
+const navItems = ["Home", "About", "Offerings", "Free Books", "FAQ", "Contact"];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollTo = (id: string) => {
-    const el = document.getElementById(id.toLowerCase().replace(" ", "-"));
+    const el = document.getElementById(id.toLowerCase().replace(/ /g, "-"));
     el?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
@@ -24,7 +24,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <button
@@ -50,7 +49,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

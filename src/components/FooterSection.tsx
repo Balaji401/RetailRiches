@@ -16,7 +16,7 @@ const FooterSection = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
             <a
-              href="https://wa.me/917011168018"
+              href="https://wa.me/916309323739?text=hi"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
@@ -25,14 +25,14 @@ const FooterSection = () => {
               WhatsApp
             </a>
             <a
-              href="tel:+917011168018"
+              href="tel:+916309323739"
               className="inline-flex items-center gap-2 border border-primary/30 text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/10 transition-colors"
             >
               <Phone size={18} />
               Call Now
             </a>
             <a
-              href="https://instagram.com/retailriches"
+              href="https://www.instagram.com/retail_riches/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-border text-foreground px-6 py-3 rounded-lg font-semibold hover:border-primary/30 transition-colors"
@@ -43,7 +43,7 @@ const FooterSection = () => {
           </div>
 
           <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>© 2026 Venkata Balaji Annam — Retail Riches. All rights reserved.</p>
+            <p>© 2026 Balaji Annam — Retail Riches. All rights reserved.</p>
             <a href="mailto:contact@retailriches.com" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail size={14} />
               contact@retailriches.com

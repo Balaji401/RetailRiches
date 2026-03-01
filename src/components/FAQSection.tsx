@@ -9,28 +9,28 @@ import {
 
 const faqs = [
   {
-    q: "What does your mentorship program include?",
-    a: "Our mentorship is 100% one-on-one with Saksham Gajree. Sessions are done live through Google Meet (online) or offline in person. Every session is focused only on you, with live teaching and real market discussions.",
+    q: "I'm a complete beginner. Can I still join?",
+    a: "Absolutely! Most of my students start from zero. I explain everything step by step — no prior experience needed.",
   },
   {
-    q: "How long is the mentorship program?",
-    a: "Our core mentorship program is designed to be completed in 2 months of intensive training. After that, you receive 6 months of dedicated post-mentorship assistance plus lifetime access to our trading community.",
+    q: "What will I actually learn?",
+    a: "You'll learn how to read charts, understand price action, manage your risk, and build the mindset needed to trade consistently. We cover Forex and Crypto with focus on Gold and Bitcoin.",
   },
   {
-    q: "What trading strategies do you teach?",
-    a: "We focus on pure Price Action trading with Fibonacci plans as the core strategy. Alongside this, we also cover swing trading, day trading, and positional trading in Forex and Crypto with a priority on Gold & Bitcoin.",
+    q: "How does the mentorship work?",
+    a: "It's 100% one-on-one with me (Balaji Annam) over Google Meet. We meet every alternate day for 1 hour, over 2 months. After that, you get 6 months of continued support plus lifetime community access.",
   },
   {
-    q: "Can beginners join your program?",
-    a: "Yes! Whether you're a beginner, intermediate, or experienced, you can join. Most clients already know the basics but struggle with consistency and psychological issues. That's where I step in.",
+    q: "What's the One-Time Consultation about?",
+    a: "It's a 45-minute call where I help you figure out if trading is right for you. We also talk about your goals and life direction. If you decide to join mentorship later, the consultation fee gets adjusted.",
   },
   {
-    q: "Is there a money-back guarantee?",
-    a: "We offer a full refund if you cancel at least 48 hours before your first scheduled session. For cancellations within 48 hours, a 50% refund applies.",
+    q: "Is there a refund policy?",
+    a: "Yes. Full refund if you cancel at least 48 hours before your first session. 50% refund for cancellations within 48 hours.",
   },
   {
-    q: "What support do you provide after the program?",
-    a: "Post-program support includes lifetime access to our trading community, monthly group calls, market update newsletters, and priority access to new strategies and tools.",
+    q: "What support do I get after the program?",
+    a: "You get lifetime access to our trading community, monthly group calls, and regular market updates. You're never alone after the program.",
   },
 ];
 
@@ -48,10 +48,10 @@ const FAQSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Frequently Asked <span className="text-gradient-gold">Questions</span>
+            Got <span className="text-gradient-gold">Questions?</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Get answers to common questions about our trading mentorship program
+            Here are answers to what most people ask before joining.
           </p>
         </motion.div>
 

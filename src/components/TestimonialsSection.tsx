@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
   const visible = testimonials.slice(current * itemsPerPage, current * itemsPerPage + itemsPerPage);
 
   return (
-    <section id="why-us" ref={ref} className="py-24 bg-secondary/30">
+    <section id="testimonials" ref={ref} className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Why Us</h2>
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Testimonials</h2>
           <h3 className="text-3xl md:text-5xl font-display font-bold">
             What Our <span className="text-gradient-gold">Traders Are Saying</span>
           </h3>

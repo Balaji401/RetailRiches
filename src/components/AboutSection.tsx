@@ -1,15 +1,14 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Target, Heart, Brain, User, TrendingUp } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const values = [
-  { icon: Target, title: "Clarity & Simplicity", desc: "Trading doesn't have to be complicated. Every concept is explained in the simplest way possible." },
-  { icon: Heart, title: "Honesty & Trust", desc: "No false promises, no shortcuts — just real mentorship with complete honesty." },
-  { icon: Brain, title: "Discipline Over Emotion", desc: "Markets reward discipline, not emotions. We build habits that keep consistency in." },
-  { icon: User, title: "Trader First Approach", desc: "Every session is one-on-one, ensuring personalized guidance for independence." },
-  { icon: TrendingUp, title: "Growth Mindset", desc: "Learning never stops. We continuously refine methods and adapt to markets." },
+  { icon: Target, title: "Simple & Clear", desc: "No confusing jargon. Every concept is broken down so anyone can understand it — even if you're brand new." },
+  { icon: Heart, title: "100% Honest", desc: "No fake promises of overnight riches. Just real guidance from real experience." },
+  { icon: Brain, title: "Mindset First", desc: "Trading is 80% psychology. We help you build the discipline and patience to stay consistent." },
+  { icon: User, title: "Personal Attention", desc: "Every session is one-on-one. Your questions matter, and you get answers tailored to you." },
+  { icon: TrendingUp, title: "Always Improving", desc: "Markets change. We keep learning and adapting — and teach you to do the same." },
 ];
 
 const AboutSection = () => {
@@ -30,21 +29,18 @@ const AboutSection = () => {
             <h2 className="text-sm font-semibold uppercase tracking-widest text-primary">About Us</h2>
           </div>
           <h3 className="text-3xl md:text-5xl font-display font-bold mb-8">
-            Welcome to <span className="text-gradient-gold">Retail Riches</span>
+            Hi, I'm <span className="text-gradient-gold">Balaji Annam</span>
           </h3>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            I'm Venkata Balaji Annam, and I've been actively trading the markets with deep expertise. 
-            Over the years, I've mentored hundreds of clients worldwide, helping them simplify their trading journey 
-            with the right roadmap. I specialize in Forex and Crypto markets, with a strong focus on 
-            Gold (XAU/USD) and Bitcoin (BTC/USD).
+            I've been trading for years and have helped 600+ people start their trading journey the right way. 
+            I focus on Forex and Crypto — especially <strong className="text-foreground">Gold (XAU/USD)</strong> and <strong className="text-foreground">Bitcoin (BTC/USD)</strong>.
           </p>
           <p className="text-muted-foreground leading-relaxed text-lg mt-4">
-            At Retail Riches, our mission is simple: to make you an independent and confident trader. 
-            We guide you to develop the skills, mindset, and confidence required to trade successfully on your own.
+            My goal is simple: <strong className="text-foreground">make you an independent trader</strong>. 
+            I won't give you signals to follow blindly — I'll teach you how to read the market yourself, manage risk, and trade with confidence.
           </p>
         </motion.div>
 
-        {/* Core Values */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {values.map((v, i) => (
             <motion.div
